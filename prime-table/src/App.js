@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-
+import { Table } from "./Table";
 function App() {
 	const [number, setNumber] = useState("");
 
 	const handleChange = (event) => {
-		console.log("handlechange clicked");
+		//	console.log("handlechange clicked");
 
 		setNumber(event.target.value);
 	};
@@ -19,7 +19,6 @@ function App() {
 		return true;
 	};
 
-	//const numbers = [2, 3, 5, 6, 7, 8, 9];
 	const findNPrimes = (nth) => {
 		//start with the first prime number
 		let primes = [2];
@@ -51,14 +50,7 @@ function App() {
 				/>
 			</span>
 			<input type="submit" value="Submit" />
-			<br />
-			{findNPrimes(3)}
-			<br />
-			{findNPrimes(6)}
-			<br />
-			{findNPrimes(9)}
-			<br />
-			{findNPrimes(12)}
+			<Table></Table>
 		</div>
 	);
 }
