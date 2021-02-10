@@ -19,8 +19,26 @@ function App() {
 		return true;
 	};
 
-	const numbers = [2, 3, 5, 6, 7, 8, 9];
-
+	//const numbers = [2, 3, 5, 6, 7, 8, 9];
+	const findNPrimes = (nth) => {
+		//start with the first prime number
+		let primes = [2];
+		//start with the count
+		let count = 1;
+		//second prime number
+		let num = 3;
+		//Start from odd number and increase count by 2
+		//if we find prime number then push it to an array and increase count
+		while (count <= nth) {
+			if (isPrime(num)) {
+				primes.push(num);
+				count++;
+			}
+			num += 2;
+		}
+		console.log(primes);
+		return primes;
+	};
 	return (
 		<div>
 			<span>Prime number</span>
@@ -33,7 +51,14 @@ function App() {
 				/>
 			</span>
 			<input type="submit" value="Submit" />
-			{console.log(numbers.map((num) => isPrime(num)))}
+			<br />
+			{findNPrimes(3)}
+			<br />
+			{findNPrimes(6)}
+			<br />
+			{findNPrimes(9)}
+			<br />
+			{findNPrimes(12)}
 		</div>
 	);
 }
