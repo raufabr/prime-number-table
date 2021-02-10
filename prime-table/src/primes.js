@@ -13,6 +13,7 @@ const isPrime = (num) => {
 
 const findNPrimes = (nth) => {
 	//start with the first prime number
+	if (nth <= 0) return null;
 	let primes = [2];
 	if (nth <= 1) {
 		return primes;

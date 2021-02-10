@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test that findNPrimes returns the right elements in array matches snapshot 1`] = `
+<DocumentFragment>
+  <table>
+    <thead>
+      <tr>
+        <th />
+        <th>
+          2
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>
+          2
+        </th>
+        <td>
+          4
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</DocumentFragment>
+`;
+
+exports[`matches snapshot 1`] = `
+<DocumentFragment>
+  <table>
+    <thead>
+      <tr>
+        <th />
+        <th>
+          2
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th>
+          2
+        </th>
+        <td>
+          4
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</DocumentFragment>
+`;
