@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import { Table } from "./Table";
 function App() {
-	const [input, setInput] = useState("");
-	//const [primeNums, setPrimeNums] = useState([]);
+	const [input, setInput] = useState(1);
 
 	const handleChange = (event) => {
 		setInput(event.target.value);
@@ -15,11 +14,12 @@ function App() {
 				<input
 					type="number"
 					name="primeNum"
+					min="1"
 					onChange={handleChange}
 					value={input}
 				/>
 			</span>
-			{input > 2 && <Table input={input} />}
+			{input >= 1 && <Table input={input} />}
 		</div>
 	);
 }

@@ -15,13 +15,16 @@ export const Table = ({ input }) => {
 	const findNPrimes = (nth) => {
 		//start with the first prime number
 		let primes = [2];
+		if (input <= 1) {
+			return primes;
+		}
 		//start with the count
 		let count = 1;
 		//second prime number
 		let num = 3;
 		//Start from odd number and increase count by 2
 		//if we find prime number then push it to an array and increase count
-		while (count <= nth) {
+		while (count < nth) {
 			if (isPrime(num)) {
 				primes.push(num);
 				count++;
