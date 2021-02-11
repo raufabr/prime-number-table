@@ -26,9 +26,9 @@ If I had more time I'd complete the following optimisation pieces -
 - Otherwise display error message 
 - The table calls findNPrime number twice, once for the heading. This is inefficient for performance and could be improved. Easiest way may be to add the JSX syntax when calling generateTable().
 - The functions shouldn't take string as an input
-- I would've liked to add 2 more test cases to check the width and height of Table component is n+1, but this was my first time using react-test-library. I tried installing Jest/Enzyme to the project but I had configuration issues and couldn't set it up. 
+- I would've liked to add 2 more test cases to check the width and height of Table component is n+1, but this was my first time using react-test-library, and I ran out of time whilst setting up Enzyme/Jest
 - I implemented a second function for isPrime using sieve of eratosthenes's algorithm, but didn't feel it was necessarily better than brute forcing. Code below -
-
+- If I stored the array of primes in a state variable, I could improve efficiency further by providing the last prime number so that findNthPrime wouldn't have to start from the beginning. 
 const isPrime2 =(value) =>{
     let primes = [];
     let primes2 = []
