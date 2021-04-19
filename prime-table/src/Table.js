@@ -11,7 +11,6 @@ export const Table = ({ input }) => {
 			}
 			output += "</tr>";
 		}
-
 		return ReactHtmlParser(output);
 	};
 
@@ -25,7 +24,16 @@ export const Table = ({ input }) => {
 					))}
 				</tr>
 			</thead>
-			<tbody>{generateTable(findNPrimes(input))}</tbody>
+			<tbody>
+				{findNPrimes(input).map((num) => (
+					<tr>
+						<th>{num}</th>
+						{findNPrimes(input).map((innerNum) => (
+							<td>{innerNum * num}</td>
+						))}
+					</tr>
+				))}
+			</tbody>
 		</table>
 	);
 };
